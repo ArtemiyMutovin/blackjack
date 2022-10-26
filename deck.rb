@@ -1,7 +1,3 @@
-require_relative 'player'
-require_relative 'dealer'
-
-
 class Deck
   attr_reader :cards
 
