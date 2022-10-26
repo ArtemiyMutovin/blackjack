@@ -8,5 +8,8 @@ class Game
 
     2.times { @player.add_card!(@deck) }
     2.times { @dealer.add_card!(@deck) }
+
+    @player.decrease_balance
+    @dealer.decrease_balance
   end
 end

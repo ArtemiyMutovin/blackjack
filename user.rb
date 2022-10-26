@@ -33,7 +33,7 @@ class User
 
     @cards.each do |card|
       point += if card.face == 'A'
-                 ace_point(point, card.value)
+                 check_point(point, card.value)
                else
                  card.value
                end
@@ -43,7 +43,7 @@ class User
 
   private
 
-  def ace_point(point, card_value)
+  def check_point(point, card_value)
     if point + card_value <= 21
       card_value
     else
