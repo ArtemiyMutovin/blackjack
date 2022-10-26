@@ -27,4 +27,27 @@ class User
   def decrease_balance
     @balance -= 10
   end
+
+  def points
+    point = 0
+
+    @cards.each do |card|
+      point += if card.face == 'A'
+                 ace_point(point, card.value)
+               else
+                 card.value
+               end
+    end
+    point
+  end
+
+  private
+
+  def ace_point(point, card_value)
+    if point + card_value <= 21
+      card_value
+    else
+      1
+    end
+  end
 end

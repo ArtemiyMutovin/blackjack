@@ -9,8 +9,8 @@ class Deck
     cards = []
 
     %w[<З <> + ^].each do |type|
-      (2..10).each do |number|
-        cards << Card.new(type, number)
+      (2..10).each do |value|
+        cards << Card.new(type, value)
       end
 
       %w[J Q K A].each do |face|
