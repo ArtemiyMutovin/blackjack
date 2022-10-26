@@ -1,11 +1,7 @@
-require_relative 'player'
-require_relative 'deck'
-
-class Dealer
-  attr_accessor :bank
-
+require_relative 'user'
+class Dealer < User
   def initialize
-    @bank = 100
-    @cards = []
+    super
+    @name = 'Dealer'
   end
 end

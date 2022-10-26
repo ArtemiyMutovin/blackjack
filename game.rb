@@ -1,12 +1,15 @@
-require_relative 'player'
-require_relative 'dealer'
-require_relative 'deck'
-
 class Game
   attr_reader :player, :dealer, :deck
 
   def initialize(player, dealer)
     @player = player
     @dealer = dealer
+    @deck = Deck.new
+
+    2.times { @player.add_card!(@deck) }
+    2.times { @dealer.add_card!(@deck) }
+
+    @player.decrease_balance
+    @dealer.decrease_balance
   end
 end
