@@ -8,7 +8,7 @@ class Card
   end
 
   def show_card
-    "#{@value}-#{@type}"
+    "#{@value} #{@type}"
   end
 
   private

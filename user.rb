@@ -6,7 +6,7 @@ class User
     @cards = []
   end
 
-  def add_card!(deck)
+  def add_card(deck)
     @cards << deck.cards.shift
   end
 
